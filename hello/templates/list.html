@@ -1,0 +1,24 @@
+<div id="list" class="d-flex justify-content-center">
+  <ul class="list-group" >
+    <li class="list-group-item" v-for="task in tasks">[[task]]</li>
+  </ul>
+</div>
+<script type="text/javascript">
+    const app = new Vue({
+      el: '#list',
+      delimiters: ['[[', ']]'],
+      data() {
+        return {
+          returned_task: '',
+          new_task: '',
+          create_modify: '',
+          modify_id: -1,
+          modify_index: -1,
+          tasks: []
+        }
+      },
+      created() {
+        this.tasks = ['do this 🐱‍🐉', 'and that 🤳'];
+      },
+    });
+</script>

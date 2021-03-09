@@ -1,0 +1,24 @@
+<div id="example-1" class="d-flex justify-content-center">
+  <button class="btn btn-primary m-1"  v-on:click="counter += 1">Vue test btn</button>
+  <button class="btn btn-primary m-1"  v-on:click="increment()">[[ counter ]]</button>
+
+  <div class="alert alert-primary m-1" role="alert">
+    The button above has been clicked [[ counter ]] times.
+  </div>
+</div>
+<script type="text/javascript">
+  const example1 = new Vue({
+    delimiters: ['[[', ']]'],
+    el: '#example-1',
+    data() {
+      return {
+        counter: 0
+      }
+    },
+    methods: {
+      increment: function () {
+        this.counter += 1
+      }
+    }
+  });
+</script>

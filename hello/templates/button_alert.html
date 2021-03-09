@@ -1,0 +1,14 @@
+<div id="example-3" class="d-flex justify-content-center">
+  <button class="btn btn-outline-dark m-1" v-on:click="say('hi')">Say hi</button>
+  <button class="btn btn-outline-info m-1" v-on:click="say('what')">Say what</button>
+</div>
+<script type="text/javascript">
+  new Vue({
+      el: '#example-3',
+      methods: {
+        say: function (message) {
+          alert(message)
+        }
+      }
+    })
+</script>
